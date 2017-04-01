@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>职业路径图</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">  <!--字体图标-->
+    <link rel="stylesheet" href="../css/hover.min.css">  <!--hover-->
+    <link rel="stylesheet" href="../css/mainPage_css.css"><!--整体css-->
+    <link rel="stylesheet" href="../css/list.css">
+
+</head>
+<body>
+<nav>
+    <div class="container">
+        <div class="mainTitle">
+            <!--<i class="fa fa-history" aria-hidden="true"></i>-->
+            <i class="fa fa-book icons" aria-hidden="true"></i>
+            <h1>知迹</h1>
+        </div>
+        <ul class="topLi">
+            <li><a href="/goController/goLoginSuccess">首页</a></li>
+            <li class="tags"><a href="/goController/goList">课程学习</a></li>
+            <li><a href="#">互动交流</a></li>
+        </ul>
+        <div class="login">
+            <input type="text" class="search_input">
+            <i class="fa fa-search search" aria-hidden="true"></i>
+            <div class="user_span">
+                <span id="nologin">未登录</span>
+                <i class="fa fa-user user" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="bagBox"></div>
+<div class="container">
+    <div id="aside">
+        <ul class="hdlist">
+            <li>
+                <a href="/goController/goList">
+                    <i class="fa fa-video-camera"></i>课程库
+                </a>
+            </li>
+            <li class="curr">
+                <a href="/goController/goProfessionalList">
+                    <i class="fa fa-map-signs"></i>职业路径图
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="fa fa-book"></i>知识体系图
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="fa fa-share-alt"></i>系列课程
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="fa fa-tags"></i>课程标签
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="page-container page-list2">
+        <div class="locals">
+            <span>首页</span>/<span>职业路径</span>
+        </div>
+        <div class="clear"></div>
+        <div class="page-box">
+            <div class="keCon" id="professional">
+               <!-- <div class="lesson-overview">
+                    <div class="layout-inner">
+                        <div class="preview-img">
+                            <a href="javascript:void(0)"><img src="../img/jikephoto/01.png"></a>
+                        </div>
+                        <div class="overview-text">
+                            <h2><a href="javascript:void(0)">WEB大前端工程师</a></h2>
+                            <p class="text"><a href="javascript:void(0)">HTML、CSS，Javascript打底儿， HTML5
+                                妥妥的，再来上Node.js，你们公司还真的需要php工程师么？...</a></p>
+                            <ul class="lesson-info">
+                                <li><i class="fa fa-book"></i>195门课程</li>
+                                <li><i class="fa fa-tags"></i>693课时</li>
+                                <li><i class="fa fa-share-alt"></i>
+                                    91 小时
+                                    45 分钟
+                                </li>
+                            </ul>
+                            <a href="javascript:void(0)" class="btn learn-link">开始学习</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lesson-overview">
+                    <div class="layout-inner">
+                        <div class="preview-img">
+                            <a href="javascript:void(0)"><img src="../img/jikephoto/02.png"></a>
+                        </div>
+                        <div class="overview-text">
+                            <h2><a href="javascript:void(0)">Android工程师</a></h2>
+                            <p class="text"><a href="javascript:void(0)">需求最大的移动开发方向，从Java基础开始学习，分阶段逐步掌握Android开发的各项技能，月薪3万不是梦。...</a>
+                            </p>
+                            <ul class="lesson-info">
+                                <li><i class="fa fa-book"></i>109门课程</li>
+                                <li><i class="fa fa-tags"></i>519课时</li>
+                                <li><i class="fa fa-share-alt"></i>
+                                    89 小时
+                                    20 分钟
+                                </li>
+                            </ul>
+                            <a href="javascript:void(0)" class="btn learn-link">开始学习</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lesson-overview">
+                    <div class="layout-inner">
+                        <div class="preview-img">
+                            <a href="javascript:void(0)"><img src="../img/jikephoto/03.png"></a>
+                        </div>
+                        <div class="overview-text">
+                            <h2><a href="javascript:void(0)">iOS开发工程师</a></h2>
+                            <p class="text"><a href="javascript:void(0)">由易到难的学习iOS开发工程师所需的核心知识，将来从事iOS移动应用开发、游戏开发等工作，或成为iOS平台应用开发和测试的专业技术人员，月薪3万向你招手。...</a>
+                            </p>
+                            <ul class="lesson-info">
+                                <li><i class="fa fa-book"></i>198门课程</li>
+                                <li><i class="fa fa-tags"></i>365课时</li>
+                                <li><i class="fa fa-share-alt"></i>
+                                    55 小时
+                                    17 分钟
+                                </li>
+                            </ul>
+                            <a href="javascript:void(0)" class="btn learn-link">开始学习</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lesson-overview">
+                    <div class="layout-inner">
+                        <div class="preview-img">
+                            <a href="javascript:void(0)"><img src="../img/jikephoto/04.png"></a>
+                        </div>
+                        <div class="overview-text">
+                            <h2><a href="javascript:void(0)">JavaWeb工程师</a></h2>
+                            <p class="text"><a href="javascript:void(0)">Java语言在Web开发领域的实现，作为Java工程师的你，再也不用劳烦Php的兄弟了。对了，BAT都是Java体系核心，你准备好入职了么？...</a>
+                            </p>
+                            <ul class="lesson-info">
+                                <li><i class="fa fa-book"></i>97门课程</li>
+                                <li><i class="fa fa-tags"></i>425课时</li>
+                                <li><i class="fa fa-share-alt"></i>
+                                    58 小时
+                                    24 分钟
+                                </li>
+                            </ul>
+                            <a href="javascript:void(0)" class="btn learn-link">开始学习</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lesson-overview">
+                    <div class="layout-inner">
+                        <div class="preview-img">
+                            <a href="javascript:void(0)"><img src="../img/jikephoto/05.png"></a>
+                        </div>
+                        <div class="overview-text">
+                            <h2><a href="javascript:void(0)">PHP工程师</a></h2>
+                            <p class="text"><a href="javascript:void(0)">最好的开发语言，没有之一！需求量最大的职业选择，多快好省，网站必备！...</a></p>
+                            <ul class="lesson-info">
+                                <li><i class="fa fa-book"></i>100门课程</li>
+                                <li><i class="fa fa-tags"></i>367课时</li>
+                                <li><i class="fa fa-share-alt"></i>
+                                    56 小时
+                                    53 分钟
+                                </li>
+                            </ul>
+                            <a href="javascript:void(0)" class="btn learn-link">开始学习</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lesson-overview">
+                    <div class="layout-inner">
+                        <div class="preview-img">
+                            <a href="javascript:void(0)"><img src="../img/jikephoto/06.png"></a>
+                        </div>
+                        <div class="overview-text">
+                            <h2><a href="javascript:void(0)">Cocos2d工程师</a></h2>
+                            <p class="text"><a href="javascript:void(0)">跟随着职业路径图，你可以在由易到难的课程中学到成为Cocos2d-x开发工程师所需的核心知识，如果掌握了“职业路径图”中的所有技术需求，你将成为一名合格的Cocos2d-x开...</a>
+                            </p>
+                            <ul class="lesson-info">
+                                <li><i class="fa fa-book"></i>114门课程</li>
+                                <li><i class="fa fa-tags"></i>525课时</li>
+                                <li><i class="fa fa-share-alt"></i>
+                                    72 小时
+                                    6 分钟
+                                </li>
+                            </ul>
+                            <a href="javascript:void(0)" class="btn learn-link">开始学习</a>
+                        </div>
+                    </div>
+                </div>-->
+
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<footer class="page-footer list_foot">
+    <div class="container center">
+        © Copyright - Made by Somebody - powered by Sky
+    </div>
+</footer>
+<script src="../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../js/layer/layer.js" type="text/javascript"></script>
+<script src="../js/gradual.js" type="text/javascript"></script>
+<script>
+    $(function () {
+        $.ajax({
+            url:"/goController/checkUsername",
+            success:function (data) {
+                if(data=="fail")
+                {
+                    $("#nologin").text("未登录");
+                    $("#nologin").mousedown(function(){
+                        window.location.href="/goController/goLogin";
+                    });
+
+                }
+                else{
+                    $("#nologin").text(data);
+                    $('#btn').unbind("click");
+                }
+            }
+        });
+        $(".hdlist li").click(function () {
+            $(this).addClass("curr").siblings().removeClass("curr");
+        });
+
+        $.ajax({
+            url:"/professionalController/findAll",
+            success:function (data) {
+
+                for(var i=0;i<data.length;i++)
+                {
+                $("#professional").append("<div class='lesson-overview'><div class='layout-inner'><div class='preview-img'><a href='javascript:void(0)'><img src='../img/jikephoto/"+data[i].img+"'></a></div><div class='overview-text'><h2><a href='javascript:void(0)'>"+data[i].type+"</a></h2><p class='text'><a href='javascript:void(0)'>"+data[i].introduction+"</a></p><ul class='lesson-info'><li><i class='fa fa-book'></i>"+data[i].courseNumber+"门课程</li><li><i class='fa fa-tags'></i>"+data[i].courseTime+"课时</li><li><i class='fa fa-share-alt'></i>"+data[i].time+"</li></ul><a href='javascript:void(0)' class='btn learn-link'>开始学习</a></div></div></div>");
+            } }
+
+
+
+        });
+    })
+</script>
+</body>
+</html>

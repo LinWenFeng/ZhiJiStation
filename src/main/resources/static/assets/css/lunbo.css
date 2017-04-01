@@ -1,0 +1,72 @@
+.banner{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px #ccc;
+}
+.banner ul,.banner li{
+    margin: 0;
+    padding: 0;
+}
+/*.img>li{
+    float: left;
+}*/
+.img{
+    position: absolute;  /*初始化位置*/
+    top: 0;
+    left: 0;
+}
+/*位置焦点圆*/
+.num>span{
+    display: inline-block;
+    margin: 0 4px;
+    padding: 0;
+    cursor: pointer; /*设置光标为手*/
+}
+.num_cir{
+    background: rgba(162, 162, 162, 0.78);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+.num{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    bottom: 10px;
+    font-size: 0;
+    z-index: 30;
+    opacity: 0.2;
+}
+
+.on{
+    background: #0275d8;
+    width: 34px;
+    border-radius: 15px;
+    transition: all 0.5s ease-out;
+}
+/*左右点击块*/
+.btn{
+    background: transparent;
+    position: absolute;
+    color: whitesmoke;
+    font-size: 60px;
+    font-family: 宋体;
+    top: 50%;
+    margin-top: -25px;
+    padding: 6px;
+    cursor: pointer;
+    opacity: 0.7;
+    z-index: 100;
+}
+.btn:hover{
+    color: whitesmoke;
+    opacity: 1;
+}
+.btn_left{
+    left: 0;
+}
+.btn_right{
+    right: 0;
+}

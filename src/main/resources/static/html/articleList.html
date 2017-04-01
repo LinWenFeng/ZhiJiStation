@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章列表</title>
+    <link rel="stylesheet" href="../assets/bootstrap4/css/bootstrap.css">
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/bootstrap4/js/bootstrap.js"></script>
+    <style>
+        li {list-style-type:none;}
+        #main{
+            margin: 60px auto;
+            padding-top: 20px;
+            width: 50%;
+        }
+        .fixed-top {
+            padding-left: 15%;
+            padding-right: 15%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+        }
+       .tag {
+            padding: 2px 2px;
+            font-size: 13px;
+            color: #ea6f5a;
+            border: 1px solid #ea6f5a;
+            border-radius: 3px;
+        }
+        .red_font{
+            color: #ea6f5a;
+            font-size: 14px;
+        }
+        .light_font{
+            font-size: 13px;
+            color: #93999f;
+        }
+        .author{
+            margin-bottom: 10px;
+        }
+        .entryList{
+            margin-left: 20px;
+        }
+        .articleList{
+            width: 90%;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"><b>知迹</b></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav nav-pills mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">课程学习</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/html/articleList.html">互动交流</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+            </form>
+            &nbsp&nbsp&nbsp
+            <ul class="nav nav-pills">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/html/editor/editor.html">写文章</a>
+                </li>
+                &nbsp&nbsp
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="isLogin">未登录</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/html/login.html" id="loginOrExit">登录</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div id="main">
+    <div class="articleList">
+        <ul class="entryList">
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var userName=sessionStorage.getItem("USERNAME");
+    if(null!=userName){
+        $("#isLogin").text(userName);
+        $("#loginOrExit").text("退出系统");
+    }
+    $(function () {
+        $.ajax({
+            url: "/article",
+            method: "GET",
+            data: {},
+            success: function (data) {
+                $.each(data, function(idx, obj) {
+                    var newLi="<li> <div class='content'> <div class='author'> <span class='tag'>作者:</span> &nbsp;" +
+                        "<span id='authorName' class='light_font'>"+obj.author+"</span>&nbsp; <span class='red_font'>发布于：</span> " +
+                        "<span class='time light_font'>"+obj.publishedDateTime+"</span><div class='name'></div></div>"+
+                        "<a class='title' href=/html/editor/preview.html?"+obj.id+"><h4 id='title'>"+obj.title+"</h4></a></div><hr></li>";
+                    /*var newLi="<li class='item'><div class='entry'><a class='entryLink' href=/html/editor/preview.html?"+obj.id+"><div>"+obj.title+"</div></a></div></li>"*/
+                    $(".entryList").append(newLi);
+                });
+            }
+        });
+    });
+</script>
+</body>
+
+
+</html>

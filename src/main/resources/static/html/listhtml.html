@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程库</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome/css/font-awesome.min.css">  <!--字体图标-->
+    <link rel="stylesheet" href="../assets/css/hover.min.css">  <!--hover-->
+    <link rel="stylesheet" href="../assets/css/mainPage_css.css"><!--整体css-->
+    <link rel="stylesheet" href="../assets/css/list.css">
+
+</head>
+<body>
+<nav>
+    <div class="container">
+        <div class="mainTitle">
+            <!--<i class="fa fa-history" aria-hidden="true"></i>-->
+            <i class="fa fa-book icons" aria-hidden="true"></i>
+            <h1>知迹</h1>
+        </div>
+        <ul class="topLi">
+            <li><a href="/goController/goLoginSuccess">首页</a></li>
+            <li class="tags"><a href="/goController/goList">课程学习</a></li>
+            <li><a href="#">互动交流</a></li>
+        </ul>
+        <div class="login">
+            <input type="text" class="search_input">
+            <i class="fa fa-search search" aria-hidden="true"></i>
+            <div class="user_span">
+                <span id="nologin">未登录</span>
+                <i class="fa fa-user user" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="bagBox"></div>
+<div class="container">
+    <div id="aside">
+        <ul class="hdlist">
+            <li class="curr">
+                <a href="/goController/goList">
+                    <i class="fa fa-video-camera"></i>课程库
+                </a>
+            </li>
+            <li>
+                <a href="/goController/goProfessionalList">
+                    <i class="fa fa-map-signs"></i>职业路径图
+                </a>
+            </li>
+            <li >
+                <a href="javascript:void(0)">
+                    <i class="fa fa-book"></i>知识体系图
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="fa fa-share-alt"></i>系列课程
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="fa fa-tags"></i>课程标签
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="page-container">
+        <div class="locals">
+            <span>首页</span>/<span>课程库</span>
+        </div>
+        <div class="clear"></div>
+        <div class="page-box" id="courses">
+           <div class="classbox bg8">
+                <div class="course-card-top cyan">
+                    <i class="fa fa-anchor"></i>
+                    <span>MySQL</span>
+                    <span>大数据</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name">扛得住的MySQL数据库架构</h3>
+                    <p>面面俱到讲解影响MySQL性能的各个因素，将MySQL架构了然于胸。</p>
+                    <div class="course-card-bottom">
+                        初级<span>·</span>
+                        893人在学
+                    </div>
+                </div>
+            </div>
+            <div class="classbox bg7">
+                <div class="course-card-top blue">
+                    <i class="fa fa-commenting"></i>
+                    <span>C</span>
+                    <span>C++</span>
+                    <span>Go</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name">算法与数据结构C++精解</h3>
+                    <p>深入讲解面试和实际开发中都会遇到的算法和数据结构问题</p>
+                    <div class="course-card-bottom">
+                        初级<span>·</span>
+                        1201人在学
+                    </div>
+                </div>
+            </div>
+            <div class="classbox bg6">
+                <div class="course-card-top red">
+                    <i class="fa fa-anchor"></i>
+                    <span>Android</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name">Android攻城狮的第一门课（入门篇）</h3>
+                    <p>想快速掌握Android应用开发基础，选择学习这门课程就对了。</p>
+                    <div class="course-card-bottom">
+                        初级<span>·</span>
+                        234407人在学
+                    </div>
+                </div>
+            </div>
+            <div class="classbox bg5">
+                <div class="course-card-top green">
+                    <i class="fa fa-map-signs"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name">JavaScript入门篇</h3>
+                    <p>JavaScript做为一名Web工程师的必备技术，本教程让您快速入门</p>
+                    <div class="course-card-bottom">
+                        初级<span>·</span>
+                        421661人在学
+                    </div>
+                </div>
+            </div>
+            <div class="classbox bg4">
+                <div class="course-card-top orange">
+                    <i class="fa fa-street-view"></i>
+                    <span>PHP</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name">PHP入门篇</h3>
+                    <p>PHP入门轻松学习，行业大牛帮您快速掌握PHP编程基础知识。</p>
+                    <div class="course-card-bottom">
+                        初级<span>·</span>
+                        286087人在学
+                    </div>
+                </div>
+            </div>
+            <div class="classbox bg3">
+                <div class="course-card-top purple">
+                    <i class="fa fa-send-o"></i>
+                    <span>Java</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name">Java入门</h3>
+                    <p>本教程从Java环境搭建、工具使用、基础语法开始，带你入门</p>
+                    <div class="course-card-bottom">
+                        初级<span>·</span>
+                        577489人在学
+                    </div>
+                </div>
+            </div>
+            <div class="classbox bg2">
+                <div class="course-card-top cyan">
+                    <i class="fa fa-fort-awesome"></i>
+                    <span>Html/Css</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name">HTML+CSS基础课程</h3>
+                    <p>HTML+CSS基础教程8小时带领大家步步深入学习标签用法和意义</p>
+                    <div class="course-card-bottom">
+                        初级<span>·</span>
+                        638434人在学
+                    </div>
+                </div>
+            </div>
+            <div class="classbox bg1">
+                <div class="course-card-top blue">
+                    <i class="fa fa-anchor"></i>
+                    <span>Python</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name">Python高级编程技巧实战</h3>
+                    <p>精选50个python训练任务，提升实战技能与高效编程技巧</p>
+                    <div class="course-card-bottom">
+                        初级<span>·</span>
+                        842人在学
+                    </div>
+                </div>
+            </div>
+            <div class="classbox bg13">
+                <div class="course-card-top cyan">
+                    <i class="fa fa-anchor"></i>
+                    <span>MySQL</span>
+                    <span>大数据</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name">扛得住的MySQL数据库架构</h3>
+                    <p>面面俱到讲解影响MySQL性能的各个因素，将MySQL架构了然于胸。</p>
+                    <div class="course-card-bottom">
+                        初级<span>·</span>
+                        893人在学
+                    </div>
+                </div>
+            </div>
+            <div class="classbox bg14">
+                <div class="course-card-top blue">
+                    <i class="fa fa-commenting"></i>
+                    <span>C</span>
+                    <span>C++</span>
+                    <span>Go</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name">算法与数据结构C++精解</h3>
+                    <p>深入讲解面试和实际开发中都会遇到的算法和数据结构问题</p>
+                    <div class="course-card-bottom">
+                        初级<span>·</span>
+                        1201人在学
+                    </div>
+                </div>
+            </div>
+            <div class="classbox bg18">
+                <div class="course-card-top blue">
+                    <i class="fa fa-commenting"></i>
+                    <span>设计工具</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name">PS入门教程——新手过招</h3>
+                    <p>PS的基本使用方法，带你入门。</p>
+                    <div class="course-card-bottom">
+                        初级<span>·</span>
+                        410202人在学
+                    </div>
+                </div>
+            </div>
+            <div class="classbox bg17">
+                <div class="course-card-top red">
+                    <i class="fa fa-commenting"></i>
+                    <span>C</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name">C语言入门</h3>
+                    <p>进入编程世界的必修课-C语言</p>
+                    <div class="course-card-bottom">
+                        初级<span>·</span>
+                        40379人在学
+                    </div>
+                </div>
+            </div>
+            <div class="classbox bg16">
+                <div class="course-card-top purple">
+                    <i class="fa fa-commenting"></i>
+                    <span>PHP</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name">PHP入门篇</h3>
+                    <p>PHP入门轻松学习，行业大牛帮您快速掌握PHP编程基础知识。</p>
+                    <div class="course-card-bottom">
+                        初级<span>·</span>
+                        287744人在学
+                    </div>
+                </div>
+            </div>
+            <div class="classbox bg15">
+                <div class="course-card-top blue">
+                    <i class="fa fa-commenting"></i>
+                    <span>Python</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name">Python入门</h3>
+                    <p>未来您要会的优雅、明确、简单语言</p>
+                    <div class="course-card-bottom">
+                        初级<span>·</span>
+                        237371人在学
+                    </div>
+                </div>
+            </div>
+            <div class="classbox bg14">
+                <div class="course-card-top orange">
+                    <i class="fa fa-commenting"></i>
+                    <span>Linux</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name"> Linux达人养成计划 I</h3>
+                    <p>Linux的入门级课程</p>
+                    <div class="course-card-bottom">
+                        初级<span>·</span>
+                        219166人在学
+                    </div>
+                </div>
+            </div>
+            <div class="classbox bg13">
+                <div class="course-card-top green">
+                    <i class="fa fa-commenting"></i>
+                    <span>Bootstrap</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name">玩转Bootstrap（基础）</h3>
+                    <p>告诉你怎么使用Bootstrap。</p>
+                    <div class="course-card-bottom">
+                        中级<span>·</span>
+                        192335人在学
+                    </div>
+                </div>
+            </div>
+            <div class="classbox bg12">
+                <div class="course-card-top blue">
+                    <i class="fa fa-commenting"></i>
+                    <span>C</span>
+                    <span>C++</span>
+                    <span>Go</span>
+                </div>
+                <div class="course-card-content">
+                    <h3 class="course-card-name">算法与数据结构C++精解</h3>
+                    <p>深入讲解面试和实际开发中都会遇到的算法和数据结构问题</p>
+                    <div class="course-card-bottom">
+                        初级<span>·</span>
+                        1201人在学
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<footer class="page-footer list_foot">
+    <div class="container center">
+        © Copyright - Made by Somebody - powered by Sky
+    </div>
+</footer>
+<script src="../assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../assets/js/layer/layer.js" type="text/javascript"></script>
+<script src="../assets/js/gradual.js" type="text/javascript"></script>
+<script>
+    $(function(){
+        $.ajax({
+            url:"/goController/checkUsername",
+            success:function (data) {
+                if(data=="fail")
+                {
+                    $("#nologin").text("未登录");
+
+                    $("#nologin").mousedown(function(){
+                        window.location.href="/goController/goLogin";
+                    });
+
+                }
+                else{
+                    $("#nologin").text(data);
+                    $('#btn').unbind("click");
+                }
+            }
+        });
+
+        $(".hdlist li").click(function(){
+            $(this).addClass("curr").siblings().removeClass("curr");
+        });
+
+        $.ajax({
+            url:"/courseController/findAll",
+            success:function (data) {
+
+            for(var i=0;i<data.length;i++)
+            {
+                var num=Math.floor(Math.random()*18+1);
+                var colors=['orange','green','purple', 'blue','red','cyan'];
+                var id = Math.ceil(Math.random()*5);
+                var color= colors[id];
+               $("#courses").append("<div class='classbox bg"+num+"'><div class='course-card-top "+color+"'><i class='fa fa-commenting'></i><span>"+data[i].label+"</span></div><div class='course-card-content'><h3 class='course-card-name'>"+data[i].name+"</h3><p>"+data[i].introduction+"</p><div class='course-card-bottom'>"+data[i].level+"<span>·</span>"+data[i].people+"人在学</div></div></div>") ;
+            }}
+        });
+    })
+</script>
+</body>
+</html>

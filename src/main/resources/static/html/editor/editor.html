@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章编辑</title>
+    <link rel="stylesheet" href="../../assets/editormd/css/editormd.css">
+    <link rel="stylesheet" href="../../assets/css/editor.css">
+    <link rel="stylesheet" href="../../assets/bootstrap4/css/bootstrap.css">
+    <style>
+        .fixed-top {
+            padding-left: 15%;
+            padding-right: 15%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+        }
+        .systemName {
+            font-size:28px;
+        }
+    </style>
+</head>
+<body>
+<div class="layout">
+    <div class="container">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand" href="#"><span class="systemName"><i class="fa fa-book icons" ></i><b>知迹</b></span></a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav nav-pills mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">课程学习</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/html/articleList.html">互动交流</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+                </form>
+                &nbsp&nbsp&nbsp
+                <ul class="nav nav-pills">
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="/html/editor/editor.html">写文章</a>
+                    </li>
+                    &nbsp&nbsp
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="isLogin">未登录</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/html/login.html" id="loginOrExit">登录</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div id="main" >
+        <div class="editor_header">
+            <span>添加文章</span>
+        </div>
+        <div class="editor_area">
+            <form>
+                <div class="edit_title">
+                    <b>标题</b>
+                    <input type="text" name="title" class="title form-control" id="title"/>
+                </div>
+                <div id="editormd">
+                    <textarea class="editormd-markdown-textarea" name="test-editormd-markdown-doc"></textarea>
+                </div>
+                <div class="subCollapsibleTitle">
+                    <span class="subCollapsibleTitleText">文章分类</span>
+                </div>
+                <div class="article_classify" >
+                    注：请为您的文章选择最合适的分类，请不要发布在不相关的分类中，否则您的帐户会被取消网站分类发布权限。
+                    <div class="site_category">
+                        编程语言：
+                        <input type="radio" id="site_categroy_106876" name="name_site_categroy" value="106876">
+                        <label for="site_categroy_106876">Java</label>
+                        <input type="radio" id="site_categroy_106880" name="name_site_categroy" value="106880">
+                        <label for="site_categroy_106880">C++</label>
+                        <input type="radio" id="site_categroy_106882" name="name_site_categroy" value="106882">
+                        <label for="site_categroy_106882">PHP</label>
+                        <input type="radio" id="site_categroy_106877" name="name_site_categroy" value="106877">
+                        <label for="site_categroy_106877">Delphi</label>
+                        <input type="radio" id="site_categroy_108696" name="name_site_categroy" value="108696">
+                        <label for="site_categroy_108696">Python</label>
+                        <input type="radio" id="site_categroy_106894" name="name_site_categroy" value="106894">
+                        <label for="site_categroy_106894">Ruby</label>
+                        <input type="radio" id="site_categroy_108735" name="name_site_categroy" value="108735">
+                        <label for="site_categroy_108735">C语言</label>
+                        <input type="radio" id="site_categroy_108746" name="name_site_categroy" value="108746">
+                        <label for="site_categroy_108746">Erlang</label>
+                        <input type="radio" id="site_categroy_108748" name="name_site_categroy" value="108748">
+                        <label for="site_categroy_108748">Go</label>
+                        <input type="radio" id="site_categroy_108751" name="name_site_categroy" value="108751">
+                        <label for="site_categroy_108751">Swift</label>
+                        <input type="radio" id="site_categroy_108752" name="name_site_categroy" value="108752">
+                        <label for="site_categroy_108752">Scala</label>
+                        <input type="radio" id="site_categroy_108753" name="name_site_categroy" value="108753">
+                        <label for="site_categroy_108753">R语言</label>
+                        <input type="radio" id="site_categroy_108742" name="name_site_categroy" value="108742">
+                        <label for="site_categroy_108742">Verilog</label>
+                        <input type="radio" id="site_categroy_108754" name="name_site_categroy" value="108754">
+                        <label for="site_categroy_108754">其它语言</label>
+                        <br>
+                        Web前端：
+                        <input type="radio" id="site_categroy_106883" name="name_site_categroy" value="106883">
+                        <label for="site_categroy_106883">Html/Css</label>
+                        <input type="radio" id="site_categroy_106893" name="name_site_categroy" value="106893">
+                        <label for="site_categroy_106893">JavaScript</label>
+                        <input type="radio" id="site_categroy_108731" name="name_site_categroy" value="108731">
+                        <label for="site_categroy_108731">jQuery</label>
+                        <input type="radio" id="site_categroy_108737" name="name_site_categroy" value="108737">
+                        <label for="site_categroy_108737">HTML5</label>
+                        <br>
+                        软件工程：
+                        <input type="radio" id="site_categroy_108710" name="name_site_categroy" value="108710">
+                        <label for="site_categroy_108710">敏捷开发</label>
+                        <input type="radio" id="site_categroy_106891" name="name_site_categroy" value="106891">
+                        <label for="site_categroy_106891">项目与团队管理</label>
+                        <input type="radio" id="site_categroy_106889" name="name_site_categroy" value="106889">
+                        <label for="site_categroy_106889">软件工程其他</label>
+                        <br>
+                        <input type="radio" id="site_categroy_0" name="name_site_categroy" value="0">
+                        <label for="site_categroy_0">取消选择</label>
+                    </div>
+                </div>
+                <div class="editor_footer">
+                    <button id="btn-save" type="button" class="btn btn-primary">发布</button>
+                </div >
+             </form>
+        </div>
+    </div>
+</div>
+<script src="../../assets/js/jquery-1.9.1.min.js"></script>
+<script src="../../assets/bootstrap4/js/bootstrap.js"></script>
+<script src="../../assets/editormd/editormd.js"></script>
+<script src="../../assets/js/layer/layer.js"></script>
+<script type="text/javascript">
+        $(function () {
+            var userName=sessionStorage.getItem("USERNAME");
+            if(null!=userName){
+                $("#isLogin").text(userName);
+                $("#loginOrExit").text("退出系统");
+            }
+            var testEditor;
+            $(function () {
+                testEditor = editormd("editormd", {
+                    width: "99.7%",
+                    height: 500,
+                    syncScrolling: "single",
+                    emoji: true,
+                    taskList: true,
+                    tocm: true,
+                    tex: true,
+                    flowChart: true,
+                    sequenceDiagram: true,
+                    searchReplace: true,
+                    path: "../../assets/editormd/lib/",
+                    imageUpload: true,
+                    imageFormats: ["jpg", "jpeg", "gif", "png", "bmp"],
+                    imageUploadURL: "/upload/editorUpload",
+                    saveHTMLToTextarea: true,
+
+                });
+            });
+            $("#btn-save").bind('click', function () {
+                var articleTitle = $("#title").val();
+                var articleContent = testEditor.getMarkdown();
+                if (articleTitle==""){
+                    layer.msg('你漏写文章标题了！~', function(){
+
+                    });
+                    $("input.title").focus();
+                }
+                else if (articleContent==""){
+                    layer.msg('你的文章内容空空的！~', function(){
+                    });
+                    $("textarea").focus();
+                }
+                else {
+                    var article = {title:articleTitle, content:articleContent};
+                    $.ajax({
+                        url: "/article",
+                        method: "POST",
+                        contentType: "application/json;charset=utf-8",
+                        data: JSON.stringify(article),
+                        dataType: "json",
+                        success: function (data) {
+                            if(data==true){
+                                layer.msg('保存成功！~', function(){
+                                });
+                                window.location.href="/html/articleList.html";
+                            }
+                            else {
+                                layer.msg('保存失败！~', function(){
+                                });
+                            }
+                        },
+                        error: function (message) {
+
+                        }
+                    });
+                }
+            });
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box-shadow{
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696',Direction=135, Strength=5);/*for ie6,7,8*/
+    background-color: #ccc;
+    -moz-box-shadow:3px 3px 8px #969696;/*firefox*/
+    -webkit-box-shadow:3px 3px 8px #969696;/*webkit*/
+    box-shadow:3px 3px 8px #969696;/*opera或ie9*/
+}
+#main{
+    margin: 100px auto;
+    width: 55%;
+    padding: 0;
+}
+.edit_title{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-right: 1px;
+    border-color: #AAAAAA ;
+}
+.editor_header{
+    font-size: 105%;
+    background: #E5EEF7;
+    border: 1px solid #AAAAAA;
+    border-bottom: 1px dashed #AAAAAA;
+    font-weight: bold;
+    color: #333333;
+    clear: left;
+}
+.editor_area{
+    background-color: #F5F5F5;
+}
+input.title{
+    margin: 0;
+    padding: 0;
+    maxlength:200;
+    width:99.8%;
+    height: 20px
+}
+.editor_footer{
+    font-size: 100%;
+    background: #E5EEF7;
+    border-top: 1px solid #BBB;
+    border-bottom: 1px dashed #BBB;
+    font-weight: bold;
+    color: #333333;
+    width: auto;
+    clear: left;
+}
+.subCollapsibleTitle {
+    font-size: 100%;
+    background: #E5EEF7;
+    border-top: 1px solid #BBB;
+    border-bottom: 1px dashed #BBB;
+    font-weight: bold;
+    color: #333333;
+    width: auto;
+    padding: 3px 12px;
+    margin: 12px 0px 5px 0px;
+    clear: left;
+}
+div.article_classify {
+    line-height: 1.8;
+}
+.site_category {
+    color: #333;
+    line-height: 150%;
+}
+input[type=checkbox] {
+    background-color: Transparent;
+    vertical-align: middle;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+input[type=radio] {
+    background-color: Transparent;
+    vertical-align: middle;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章详情</title>
+    <link rel="stylesheet" href="../../assets/editormd/css/style.css" />
+    <link rel="stylesheet" href="../../assets/editormd/css/editormd.preview.css"/>
+    <link rel="stylesheet" href="../../assets/bootstrap4/css/bootstrap.css">
+</head>
+<style>
+    #layout{
+        margin-top: 50px;
+        padding-top: 30px;
+        background-color: #F5F5F5;
+    }
+    #articleshow{
+        width: 50%;
+        margin: 10px auto;
+        background-color: #FBFBFF;
+    }
+    .box-shadow{
+        filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696',Direction=135, Strength=5);/*for ie6,7,8*/
+        background-color: #ccc;
+        -moz-box-shadow:3px 3px 8px #969696;/*firefox*/
+        -webkit-box-shadow:3px 3px 8px #969696;/*webkit*/
+        box-shadow:3px 3px 8px #969696;/*opera或ie9*/
+    }
+    .article_header{
+        padding-top: 5px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    .fixed-top {
+        padding-left: 15%;
+        padding-right: 15%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .systemName {
+        font-size:28px;
+    }
+</style>
+<body>
+<div class="container">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top" >
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span class="systemName"><i class="fa fa-book icons"></i><b>知迹</b></span></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav nav-pills mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">课程学习</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active " href="/html/articleList.html">互动交流</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+            </form>
+            &nbsp&nbsp&nbsp
+            <ul class="nav nav-pills">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/html/editor/editor.html">写文章</a>
+                </li>
+                &nbsp&nbsp
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="isLogin">未登录</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/html/login.html" id="loginOrExit">登录</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div id="layout">
+    <div id="articleshow" class="box-shadow">
+        <article>
+            <header align="center" class="article_header">
+                <h1 class="title"></h1>
+                <span class="timetag"> 发布于: </span>
+                <span class="publish-time"></span>&nbsp&nbsp&nbsp
+                <span class="tag"> 作者: </span>
+                <span class="authorName"></span>
+            </header>
+            <div id="editormd-view">
+                <textarea style="display:none;" name="test-editormd-markdown-doc" class="articlecontent">
+                </textarea>
+            </div>
+        </article>
+    </div>
+</div>
+<script src="../../assets/editormd/js/jquery.min.js"></script>
+<script src="../../assets/editormd/lib/marked.min.js"></script>
+<script src="../../assets/editormd/lib/prettify.min.js"></script>
+<script src="../../assets/editormd/lib/raphael.min.js"></script>
+<script src="../../assets/editormd/lib/underscore.min.js"></script>
+<script src="../../assets/editormd/lib/sequence-diagram.min.js"></script>
+<script src="../../assets/editormd/lib/flowchart.min.js"></script>
+<script src="../../assets/editormd/lib/jquery.flowchart.min.js"></script>
+<script src="../../assets/editormd/editormd.js"></script>
+<script src="../../assets/bootstrap4/js/bootstrap.js"></script>
+
+<script type="text/javascript">
+
+    var userName=sessionStorage.getItem("USERNAME");
+    if(null!=userName){
+        $("#isLogin").text(userName);
+        $("#loginOrExit").text("退出系统");
+    }
+    var articleId = location.search.substring(1);
+    $.ajax({
+        url: "/article/"+articleId,
+        data: {},
+        success: function (data) {
+            $(".title").append(data.title);
+            $(".publish-time").append(data.publishedDateTime);
+            $(".authorName").append(data.author);
+            $(".articlecontent").text(data.content);
+            editormd.markdownToHTML("editormd-view", {
+                htmlDecode      : "style,script,iframe",
+                tocm            : true,
+                emoji           : true,
+                taskList        : true,
+                tex             : true,
+                flowChart       : true,
+                sequenceDiagram : true,
+            });
+        }
+    });
+</script>
+</body>
+</html>

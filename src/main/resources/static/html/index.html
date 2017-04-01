@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="../assets/bootstrap4/css/bootstrap.css">
+    <style>
+        .fixed-top {
+            margin-left: 15%;
+            margin-right: 15%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"><b>知迹</b></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav nav-pills mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">首页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">课程学习</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/html/articleList.html">互动交流</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+            </form>
+            &nbsp&nbsp&nbsp
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/html/editor/editor.html">写文章</a>
+                </li>
+                &nbsp&nbsp
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="isLogin">未登录</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/html/login.html" id="loginOrExit">登录</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<script src="../assets/js/jquery-1.9.1.min.js"></script>
+<script src="../assets/bootstrap4/js/bootstrap.js"></script>
+<script type="text/javascript">
+    var userName=sessionStorage.getItem("USERNAME");
+    if(null!=userName){
+        $("#isLogin").text(userName);
+        $("#loginOrExit").text("退出系统");
+    }
+</script>
+</body>
+</html>
